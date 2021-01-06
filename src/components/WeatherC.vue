@@ -9,11 +9,11 @@
           href="https://github.com/Pariola-droid"
           target="_blank"
           rel="no-opener"
-          class="fixed"
+          class="fixed animate__bounceIn"
         >
           <ion-icon name="logo-github"></ion-icon>
         </a>
-        <div class="doc">
+        <div class="doc animate__bounceIn">
           <h3>Weather Doctor</h3>
         </div>
 
@@ -21,7 +21,7 @@
           <input
             type="text"
             name=""
-            class="search"
+            class="search animate__bounceIn"
             placeholder="Ask the weather doc"
             v-model="query"
             @keypress="fetchWeather"
@@ -30,20 +30,22 @@
 
         <div class="weather_wrap" v-if="typeof weather.main != 'undefined'">
           <div class="location_box">
-            <div class="location">
+            <div class="location animate__bounceIn">
               <div class="L">{{ weather.name }},</div>
               <div class="L">
                 {{ weather.sys.country }}
               </div>
             </div>
-            <div class="date">
+            <div class="date animate__bounceIn">
               {{ dateBuilder() }}
             </div>
           </div>
 
           <div class="weather_box">
-            <div class="temp">{{ Math.round(weather.main.temp) }}°c</div>
-            <div class="weather">
+            <div class="temp animate__bounceIn">
+              {{ Math.round(weather.main.temp) }}°c
+            </div>
+            <div class="weather animate__bounceIn">
               {{ weather.weather[0].main }}
             </div>
           </div>
@@ -139,6 +141,8 @@ export default {
   top: 5%;
   right: 5%;
   text-decoration: none;
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 
 .main_page .main_wrapper .fixed ion-icon {
@@ -156,6 +160,8 @@ export default {
   font-family: "Josefin Sans", sans-serif;
   color: #f5f5f5;
   text-shadow: 3px 6px 10px rgba(0, 0, 0, 0.25);
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 
 /* Search ======= Box */
@@ -181,6 +187,8 @@ export default {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 
 .main_wrapper .search_box .search::placeholder {
@@ -216,7 +224,8 @@ export default {
   justify-content: center;
   width: 100%;
   height: auto;
-
+  animation-delay: 0s;
+  animation-duration: 1s;
   /* background: grey; */
 }
 
@@ -239,6 +248,8 @@ export default {
   font-size: 2rem;
   word-spacing: 2px;
   color: #f5f5f5;
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 
 /* Weather ======= Box */
@@ -268,6 +279,8 @@ export default {
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.25);
   color: #f5f5f5;
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 
 .main_wrapper .weather_wrap .weather_box .weather {
@@ -285,6 +298,8 @@ export default {
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.25);
   color: #f5f5f5;
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 
 @media only screen and (max-width: 500px) {

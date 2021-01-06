@@ -5,16 +5,21 @@
   >
     <main class="main_page">
       <div class="main_wrapper">
-        <a
-          href="https://github.com/Pariola-droid/Weather-doctor"
-          target="_blank"
-          rel="no-opener"
-          class="fixed animate__bounceIn"
-        >
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-        <div class="doc animate__bounceIn">
-          <h3>Weather Doctor</h3>
+        <div class="nav_hold">
+          <div class="nav">
+            <div class="doc animate__bounceIn">
+              <h3>Weather Doctor</h3>
+            </div>
+
+            <a
+              href="https://github.com/Pariola-droid/Weather-doctor"
+              target="_blank"
+              rel="no-opener"
+              class="fixed animate__bounceIn"
+            >
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </div>
         </div>
 
         <div class="search_box">
@@ -140,18 +145,37 @@ export default {
   /* background-color: rgba(45, 87, 194, 0.05); */
   /* backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); */
+  padding-top: 4rem;
 }
 
-.main_page .main_wrapper .fixed {
+.main_page .main_wrapper .nav_hold {
   position: fixed;
-  top: 5%;
-  right: 5%;
+  top: 0%;
+  left: 0%;
+  height: 70px;
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+}
+
+.main_page .main_wrapper .nav_hold .nav {
+  height: 100%;
+  width: 1000px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.main_wrapper .nav_hold .nav .fixed {
   text-decoration: none;
   animation-delay: 0s;
   animation-duration: 1s;
 }
 
-.main_page .main_wrapper .fixed ion-icon {
+.main_wrapper .nav_hold .nav .fixed ion-icon {
   font-size: 1.2rem;
   padding: 0.6rem;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
@@ -160,22 +184,23 @@ export default {
   color: #313131;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
   transition: 0.4s;
 }
 
-.main_page .main_wrapper .fixed ion-icon:hover {
+.main_wrapper .nav_hold .nav .fixed ion-icon:hover {
   transform: scale(1.1);
 }
 
-.main_wrapper .doc {
-  width: 100%;
+.main_wrapper .nav_hold .nav .doc {
+  width: auto;
   height: auto;
   font-family: "Josefin Sans", sans-serif;
   color: #f5f5f5;
   text-shadow: 3px 6px 10px rgba(0, 0, 0, 0.25);
   animation-delay: 0s;
   animation-duration: 1s;
+  /* margin-top: auto; */
 }
 
 /* Search ======= Box */
@@ -211,7 +236,7 @@ export default {
 }
 
 .main_wrapper .search_box .search:hover::placeholder {
-  word-spacing: 4px;
+  word-spacing: 2px;
 }
 
 .main_wrapper .search_box .search:focus,
@@ -327,9 +352,19 @@ export default {
   animation-duration: 1s;
 }
 
+@media only screen and (max-width: 1000px) {
+  .main_page .main_wrapper .nav_hold .nav {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 500px) {
-  .main_page .main_wrapper .fixed {
-    top: 3%;
+  .main_wrapper .weather_wrap .location_box {
+    margin-top: -3rem;
+  }
+
+  .main_page .main_wrapper .nav_hold .nav {
+    padding: 0 1.2rem;
   }
 
   .main_wrapper .search_box .search {

@@ -6,7 +6,7 @@
     <main class="main_page">
       <div class="main_wrapper">
         <a
-          href="https://github.com/Pariola-droid"
+          href="https://github.com/Pariola-droid/Weather-doctor"
           target="_blank"
           rel="no-opener"
           class="fixed animate__bounceIn"
@@ -124,6 +124,9 @@ export default {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
   display: grid;
   place-items: center;
+  background-color: rgba(45, 87, 194, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .main_page .main_wrapper {
   height: 100vh;
@@ -134,6 +137,9 @@ export default {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  /* background-color: rgba(45, 87, 194, 0.05); */
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
 }
 
 .main_page .main_wrapper .fixed {
@@ -152,6 +158,14 @@ export default {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100%;
   color: #313131;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+
+.main_page .main_wrapper .fixed ion-icon:hover {
+  transform: scale(1.1);
 }
 
 .main_wrapper .doc {
@@ -176,7 +190,7 @@ export default {
   height: 3.2rem;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px 0px 10px 0px;
+  border-radius: 10px 0 10px 0;
   appearance: none;
   border: none;
   outline: none;
@@ -193,11 +207,16 @@ export default {
 
 .main_wrapper .search_box .search::placeholder {
   color: #2c2c2c;
+  transition: 0.4s;
+}
+
+.main_wrapper .search_box .search:hover::placeholder {
+  word-spacing: 4px;
 }
 
 .main_wrapper .search_box .search:focus,
 .main_wrapper .search_box .search:hover {
-  border-radius: 0px 10px 0px 10px;
+  border-radius: 0 8px 0 8px;
   background-color: rgba(255, 255, 255, 0.75);
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
 }
@@ -277,7 +296,10 @@ export default {
   font-size: 3.8rem;
   font-weight: 900;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(45, 87, 194, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #f5f5f5;
   animation-delay: 0s;
   animation-duration: 1s;
@@ -295,8 +317,11 @@ export default {
   margin: 0 auto;
   font-size: 2.8rem;
   font-weight: 900;
-  text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+  text-shadow: 3px 6px 10px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #f5f5f5;
   animation-delay: 0s;
   animation-duration: 1s;
@@ -308,7 +333,7 @@ export default {
   }
 
   .main_wrapper .search_box .search {
-    font-size: 1rem;
+    font-size: 0.9rem;
     height: 3.5rem;
   }
   .main_page .main_wrapper {

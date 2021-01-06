@@ -42,6 +42,8 @@ export default {
   overflow: hidden;
   height: auto;
   width: 100%;
+
+ 
 }
 
 #app.warm {
